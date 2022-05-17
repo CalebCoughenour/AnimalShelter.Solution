@@ -11,11 +11,16 @@
   <h3>No animals have been added yet!</h3>
 }
 
+<div class="cardWrapper">
 @foreach (Animal animal in Model)
-{
-  <li>@animal.Name</li>
-  <li>@animal.AnimalType</li>
-  <li>@animal.Breed</li>
-}
+  {
+    <div class="animalCard">
+      <li>@animal.Name</li>
+      <li>@animal.AnimalType</li>
+      <li>@animal.Breed</li>
+      <li>@animal.DateOfAdmit</li>
+    </div>
+  }
+</div>
 
-<button class="btn btn-success">@Html.ActionLink("Add Animal", "Create")</button>
+<p>@Html.ActionLink("Add Animal", "Create")</p>

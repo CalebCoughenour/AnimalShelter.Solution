@@ -1,3 +1,22 @@
-#DateOfAdmit {
-  width: 5vw;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 15vw;
+}
+
+.animalCard {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  width: 10vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
