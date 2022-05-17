@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Shelter.Models.Animal
+
+<h4>Add a new task</h4>
+@using (Html.BeginForm())
+{
+  @Html.Label("Animal Name: ")
+  @Html.TextBoxFor(model => model.Name)
+
+  @Html.Label("Animal Type: ")
+  @Html.TextBoxFor(model => model.AnimalType)
+
+  @Html.Label("Animal Gender: ")
+  @Html.TextBoxFor(model => model.Gender)
+
+  @* @Html.Label("Date of admittance: ")
+  @Html.TextBoxFor(model => model.DateOfAdmit) *@
+
+  @Html.TextBoxFor(model => model.DateOfAdmit, new { @class = "form-control", @type = "date",placeholder = "Date of Admittance" })
+
+  @* @Html.TextBoxFor(model => model.CreationDate, "{0:yyyy-MM-dd}", new { type="date" } *@
+
+  @* <label for="date">Date of admittance: </label>
+  <input id="date" name="date" type="date"> *@
+  
+  @Html.Label("Animal Breed:")
+  @Html.TextBoxFor(model => model.Breed)
+  <input type="submit" value="Add Animal"/>
+
+}
+<p>@Html.ActionLink("Show all items", "Index")</p>
